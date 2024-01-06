@@ -45,7 +45,7 @@ const sunMaterial = new THREE.MeshBasicMaterial({
 const sun = new THREE.Mesh(sunGeometry, sunMaterial)
 scene.add(sun)
 
-/// Planet
+/// Planet 1
 const planet1Geometry = new THREE.SphereGeometry(.25, 50, 50)
 const planet1Material = new THREE.MeshBasicMaterial({
     color: 0x00ff, 
@@ -54,6 +54,7 @@ const planet1Material = new THREE.MeshBasicMaterial({
 const planet1 = new THREE.Mesh(planet1Geometry, planet1Material)
 scene.add(planet1)
 
+/// Planet 2
 const planet2Geometry = new THREE.SphereGeometry(.5, 50, 50)
 const planet2Material = new THREE.MeshBasicMaterial({
     color: 0xff0000, 
@@ -62,6 +63,7 @@ const planet2Material = new THREE.MeshBasicMaterial({
 const planet2 = new THREE.Mesh(planet2Geometry, planet2Material)
 scene.add(planet2)
 
+/// Planet 3
 const planet3Geometry = new THREE.SphereGeometry(.75, 50, 50)
 const planet3Material = new THREE.MeshBasicMaterial({
     color: 0x00ff00, 
