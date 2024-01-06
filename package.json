@@ -1,0 +1,17 @@
+{
+  "name": "first-project-with-threejs",
+  "version": "1.0.0",
+  "description": "Its my first project using ThreeJS",
+  "main": "/JS/script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Victor-Lis",
+  "license": "ISC",
+  "devDependencies": {
+    "parcel": "^2.11.0"
+  },
+  "dependencies": {
+    "three": "^0.160.0"
+  }
+}
