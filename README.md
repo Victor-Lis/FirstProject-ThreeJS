@@ -188,6 +188,17 @@ function animate() {
 renderer.setAnimationLoop(animate)
 ```
 
+### Screenshots
+
+![Index](https://github.com/Victor-Lis/FirstProject-ThreeJS/blob/master/project-images/IndexScreen.png)
+
+![Exercise](https://github.com/Victor-Lis/FirstProject-ThreeJS/blob/master/project-images/ExerciseScreen.png)
+
+![Prática 1](https://github.com/Victor-Lis/FirstProject-ThreeJS/blob/master/project-images/Solar-System.png)
+
+![Prática 2](https://github.com/Victor-Lis/FirstProject-ThreeJS/blob/master/project-images/Solar-System2.png)
+
+
 ## Autores
 
 - [@Victor-Lis](https://github.com/Victor-Lis)
