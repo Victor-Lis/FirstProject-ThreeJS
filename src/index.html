@@ -1,22 +1,50 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Three.js Tutorial</title>
 
     <style>
-        *{
-            margin: 0;
-            padding: 0;
-            border: 0;
-            outline: 0;
+      * {
+        margin: 0;
+        padding: 0;
+        border: 0;
+        outline: 0;
+        font-family: sans-serif;
+      }
+      body {
+        min-height: 100svh;
+        display: flex;
+        flex-direction: column;
+        background-color: #202020;
+        justify-content: space-around;
+        align-items: center;
+
+        > a{
+          background-color: #fff;
+          color: #000;
+          text-decoration: none;
+
+          border-radius: 10px;
+          padding: 2.5% 5%;
+
+          font-size: 1.5rem;
+
+          &:hover {
+            opacity: 0.7;
+            cursor: pointer;
+            transition: 0.15s;
+
+            box-shadow: 0px 0px 0px 10px #202020, 0px 0px 0px 15px #004cff;
+          }
         }
+      }
     </style>
 
-    <script src="./JS/script.js" type="module" defer></script>
-</head>
-<body>
-    
-</body>
+  </head>
+  <body>
+    <a id="exercise" href="./exercise.html">Exercise</a>
+    <a id="practice" href="./practice.html">Practice</a>
+  </body>
 </html>
