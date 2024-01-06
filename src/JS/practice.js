@@ -30,14 +30,14 @@ const orbit = new OrbitControls(camera, renderer.domElement)
 // scene.add(grid) - Desabilitado na versão final
 
 // Posicionando a camera e dando update no OrbitControls
-camera.position.set(0, 20, 7)
+camera.position.set(20, 6, -2.05)
 orbit.update()
-orbit.enabled = false;
+orbit.enabled = false; // Permitir ou não usuário alterar posição
 
 // Figuras
 
 /// Sun 
-const sunGeometry = new THREE.SphereGeometry(1.5, 50, 50)
+const sunGeometry = new THREE.SphereGeometry(1.5, 100, 100)
 const sunMaterial = new THREE.MeshBasicMaterial({
     color: 0xfcc00f, 
     // wireframe: true
@@ -86,5 +86,8 @@ function animate() {
     renderer.render(scene, camera);
 }
 
+setTimeout(() => {
+    orbit.enabled = true;
+}, 3600)
 
 renderer.setAnimationLoop(animate)
