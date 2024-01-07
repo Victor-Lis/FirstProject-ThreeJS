@@ -51,6 +51,9 @@ const options = {
     speed: 0.01
 }
 
+// Alterando speed (gui.add)
+gui.add(options, 'speed')
+
 // Alterando cor (gui.addColor)
 gui.addColor(options, 'boxColor').onChange(function(e){
     box.material.color.set(e)
@@ -87,14 +90,13 @@ scene.add(sphere)
 sphere.position.set(-10, 10, 0)
 
 /// Animação para girar a box
-let speed = 0.01;
 let step = 0;
 
 function animate(){
     box.rotation.x += 0.01
     box.rotation.y += 0.01
 
-    step += speed;
+    step += options.speed;
     sphere.position.y = (10 * Math.abs(Math.sin(step))) + 4.15
     renderer.render(scene, camera)
 }
