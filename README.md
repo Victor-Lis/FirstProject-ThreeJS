@@ -188,16 +188,23 @@ function animate() {
 renderer.setAnimationLoop(animate)
 ```
 
-### Screenshots
+### Screenshots - Index
 
 ![Index](https://github.com/Victor-Lis/FirstProject-ThreeJS/blob/master/project-images/IndexScreen.png)
 
+### Screenshots - Exercise
+
 ![Exercise](https://github.com/Victor-Lis/FirstProject-ThreeJS/blob/master/project-images/ExerciseScreen.png)
 
-![Prática 1](https://github.com/Victor-Lis/FirstProject-ThreeJS/blob/master/project-images/Solar-System.png)
+![ExerciseControls](https://github.com/Victor-Lis/FirstProject-ThreeJS/blob/master/project-images/ExerciseScreenControls.png)
 
-![Prática 2](https://github.com/Victor-Lis/FirstProject-ThreeJS/blob/master/project-images/Solar-System2.png)
+### Screenshots - Practice
 
+![Practice1](https://github.com/Victor-Lis/FirstProject-ThreeJS/blob/master/project-images/Solar-System.png)
+
+![Practice2](https://github.com/Victor-Lis/FirstProject-ThreeJS/blob/master/project-images/Solar-System2.png)
+
+![PracticeScreen](https://github.com/Victor-Lis/FirstProject-ThreeJS/blob/master/project-images/PracticeScreenControls.png)
 
 ## Autores
 
