@@ -1,5 +1,6 @@
 import * as THREE from 'three'
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls'
+import * as dat from 'dat.gui'
 
 // Criação do cenário
 
@@ -22,8 +23,8 @@ const camera = new THREE.PerspectiveCamera(
 const orbit = new OrbitControls(camera, renderer.domElement)
 
 // Colocando axesHelper para permitir ver eixos X, Y e Z
-// const axesHelper = new THREE.AxesHelper(5) - Desabilitado na versão final
-// scene.add(axesHelper) - Desabilitado na versão final
+// const axesHelper = new THREE.AxesHelper(5) // - Desabilitado na versão final
+// scene.add(axesHelper) // - Desabilitado na versão final
 
 // Adicionando GridHelper Plano
 // const grid = new THREE.GridHelper(25, 25) - Desabilitado na versão final

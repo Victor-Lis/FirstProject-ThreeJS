@@ -42,25 +42,23 @@ const boxMaterial = new THREE.MeshBasicMaterial({color: 0x00ff})
 const box = new THREE.Mesh(boxGeometry, boxMaterial)
 scene.add(box)
 
-const gui = new dat.GUI()
+const gui = new dat.GUI() // Criando a Class
 
+// Options, valroes a serem alterados
 const options = {
-    boxColor: '#0000ff'
+    boxColor: '#0000ff',
+    wireframe: false,
 }
 
+// Alterando cor (gui.addColor)
 gui.addColor(options, 'boxColor').onChange(function(e){
     box.material.color.set(e)
 })
 
-/// Animação para girar a box
-function animate(){
-    box.rotation.x += 0.01
-    box.rotation.y += 0.01
-
-    renderer.render(scene, camera)
-}
-
-renderer.setAnimationLoop(animate)
+// Alterando wireframe (gui.add)
+gui.add(options, 'wireframe').onChange(function(e){
+    box.material.wireframe = e
+})
 
 /// Plane (Plano - Similar a uma folha)
 
@@ -86,3 +84,14 @@ scene.add(sphere)
 
 //// Redefinindo eixos X, Y e Z
 sphere.position.set(-10, 10, 0)
+
+/// Animação para girar a box
+
+function animate(){
+    box.rotation.x += 0.01
+    box.rotation.y += 0.01
+
+    renderer.render(scene, camera)
+}
+
+renderer.setAnimationLoop(animate)
