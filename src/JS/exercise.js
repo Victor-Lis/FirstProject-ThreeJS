@@ -48,6 +48,7 @@ const gui = new dat.GUI() // Criando a Class
 const options = {
     boxColor: '#0000ff',
     wireframe: false,
+    speed: 0.01
 }
 
 // Alterando cor (gui.addColor)

@@ -35,6 +35,23 @@ camera.position.set(20, 6, -2.05)
 orbit.update()
 orbit.enabled = false; // Permitir ou não usuário alterar posição
 
+const gui = new dat.GUI() // Criando a Class
+
+const options = {
+    ScrollCam: false,
+    "Planet1 Speed": 0.003,
+    "Planet2 Speed": 0.002,
+    "Planet3 Speed": 0.001,
+}
+
+gui.add(options, 'ScrollCam').onChange((e) => {orbit.enabled = e})
+
+gui.add(options, 'Planet1 Speed')
+
+gui.add(options, 'Planet2 Speed')
+
+gui.add(options, 'Planet3 Speed')
+
 // Figuras
 
 /// Sun 
@@ -75,20 +92,17 @@ scene.add(planet3)
 
 function animate() {
     // Orbit in a circular path around the sun on the XZ plane
-    planet1.position.x = 4 * Math.cos(Date.now() * 0.003);  // Adjust radius as needed
-    planet1.position.z = 4 * Math.sin(Date.now() * 0.003);
 
-    planet2.position.x = 8 * Math.cos(Date.now() * 0.002);  // Adjust radius as needed
-    planet2.position.z = 8 * Math.sin(Date.now() * 0.002);
+    planet1.position.x = 4 * Math.cos(Date.now() * options['Planet1 Speed']);  // Adjust radius as needed
+    planet1.position.z = 4 * Math.sin(Date.now() * options['Planet1 Speed']);
 
-    planet3.position.x = 12 * Math.cos(Date.now() * 0.001);  // Adjust radius as needed
-    planet3.position.z = 12 * Math.sin(Date.now() * 0.001);
+    planet2.position.x = 8 * Math.cos(Date.now() * options['Planet2 Speed']);  // Adjust radius as needed
+    planet2.position.z = 8 * Math.sin(Date.now() * options['Planet2 Speed']);
+
+    planet3.position.x = 12 * Math.cos(Date.now() * options['Planet3 Speed']);  // Adjust radius as needed
+    planet3.position.z = 12 * Math.sin(Date.now() * options['Planet3 Speed']);
 
     renderer.render(scene, camera);
 }
-
-setTimeout(() => {
-    orbit.enabled = true;
-}, 3600)
 
 renderer.setAnimationLoop(animate)
