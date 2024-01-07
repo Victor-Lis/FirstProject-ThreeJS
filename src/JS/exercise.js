@@ -47,6 +47,7 @@ const gui = new dat.GUI() // Criando a Class
 // Options, valroes a serem alterados
 const options = {
     boxColor: '#0000ff',
+    sphereColor: 0xfcc00f,
     wireframe: false,
     speed: 0.01
 }
@@ -57,6 +58,10 @@ gui.add(options, 'speed')
 // Alterando cor (gui.addColor)
 gui.addColor(options, 'boxColor').onChange(function(e){
     box.material.color.set(e)
+})
+
+gui.addColor(options, 'sphereColor').onChange(function(e){
+    sphere.material.color.set(e)
 })
 
 // Alterando wireframe (gui.add)
@@ -89,7 +94,7 @@ scene.add(sphere)
 //// Redefinindo eixos X, Y e Z
 sphere.position.set(-10, 10, 0)
 
-/// Animação para girar a box
+/// Animação para girar a box e fazer o movimento de bound na sphere
 let step = 0;
 
 function animate(){
