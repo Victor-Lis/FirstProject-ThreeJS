@@ -1,5 +1,6 @@
 import * as THREE from 'three'
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls'
+import * as dat from 'dat.gui'
 
 // Criação do cenário
 
@@ -40,6 +41,16 @@ const boxGeometry = new THREE.BoxGeometry()
 const boxMaterial = new THREE.MeshBasicMaterial({color: 0x00ff})
 const box = new THREE.Mesh(boxGeometry, boxMaterial)
 scene.add(box)
+
+const gui = new dat.GUI()
+
+const options = {
+    boxColor: '#0000ff'
+}
+
+gui.addColor(options, 'boxColor').onChange(function(e){
+    box.material.color.set(e)
+})
 
 /// Animação para girar a box
 function animate(){
