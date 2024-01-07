@@ -86,11 +86,15 @@ scene.add(sphere)
 sphere.position.set(-10, 10, 0)
 
 /// Animação para girar a box
+let speed = 0.01;
+let step = 0;
 
 function animate(){
     box.rotation.x += 0.01
     box.rotation.y += 0.01
 
+    step += speed;
+    sphere.position.y = (10 * Math.abs(Math.sin(step))) + 4.15
     renderer.render(scene, camera)
 }
 
